@@ -4,41 +4,101 @@
 // Kana Data - Complete hiragana and katakana character sets
 const KANA_DATA = {
     hiragana: {
-        'a': 'あ', 'i': 'い', 'u': 'う', 'e': 'え', 'o': 'お',
-        'ka': 'か', 'ki': 'き', 'ku': 'く', 'ke': 'け', 'ko': 'こ',
-        'sa': 'さ', 'shi': 'し', 'su': 'す', 'se': 'せ', 'so': 'そ',
-        'ta': 'た', 'chi': 'ち', 'tsu': 'つ', 'te': 'て', 'to': 'と',
-        'na': 'な', 'ni': 'に', 'nu': 'ぬ', 'ne': 'ね', 'no': 'の',
-        'ha': 'は', 'hi': 'ひ', 'fu': 'ふ', 'he': 'へ', 'ho': 'ほ',
-        'ma': 'ま', 'mi': 'み', 'mu': 'む', 'me': 'め', 'mo': 'も',
-        'ya': 'や', 'yu': 'ゆ', 'yo': 'よ',
-        'ra': 'ら', 'ri': 'り', 'ru': 'る', 're': 'れ', 'ro': 'ろ',
-        'wa': 'わ', 'wo': 'を', 'n': 'ん'
+        // Basic characters
+        basic: {
+            'a': 'あ', 'i': 'い', 'u': 'う', 'e': 'え', 'o': 'お',
+            'ka': 'か', 'ki': 'き', 'ku': 'く', 'ke': 'け', 'ko': 'こ',
+            'sa': 'さ', 'shi': 'し', 'su': 'す', 'se': 'せ', 'so': 'そ',
+            'ta': 'た', 'chi': 'ち', 'tsu': 'つ', 'te': 'て', 'to': 'と',
+            'na': 'な', 'ni': 'に', 'nu': 'ぬ', 'ne': 'ね', 'no': 'の',
+            'ha': 'は', 'hi': 'ひ', 'fu': 'ふ', 'he': 'へ', 'ho': 'ほ',
+            'ma': 'ま', 'mi': 'み', 'mu': 'む', 'me': 'め', 'mo': 'も',
+            'ya': 'や', 'yu': 'ゆ', 'yo': 'よ',
+            'ra': 'ら', 'ri': 'り', 'ru': 'る', 're': 'れ', 'ro': 'ろ',
+            'wa': 'わ', 'wo': 'を', 'n': 'ん'
+        },
+        // Dakuten (voiced) and Handakuten characters
+        dakuten: {
+            'ga': 'が', 'gi': 'ぎ', 'gu': 'ぐ', 'ge': 'げ', 'go': 'ご',
+            'za': 'ざ', 'ji': 'じ', 'zu': 'ず', 'ze': 'ぜ', 'zo': 'ぞ',
+            'da': 'だ', 'dji': 'ぢ', 'dzu': 'づ', 'de': 'で', 'do': 'ど',
+            'ba': 'ば', 'bi': 'び', 'bu': 'ぶ', 'be': 'べ', 'bo': 'ぼ',
+            'pa': 'ぱ', 'pi': 'ぴ', 'pu': 'ぷ', 'pe': 'ぺ', 'po': 'ぽ'
+        },
+        // Combination characters (yōon)
+        combinations: {
+            'kya': 'きゃ', 'kyu': 'きゅ', 'kyo': 'きょ',
+            'sha': 'しゃ', 'shu': 'しゅ', 'sho': 'しょ',
+            'cha': 'ちゃ', 'chu': 'ちゅ', 'cho': 'ちょ',
+            'nya': 'にゃ', 'nyu': 'にゅ', 'nyo': 'にょ',
+            'hya': 'ひゃ', 'hyu': 'ひゅ', 'hyo': 'ひょ',
+            'mya': 'みゃ', 'myu': 'みゅ', 'myo': 'みょ',
+            'rya': 'りゃ', 'ryu': 'りゅ', 'ryo': 'りょ',
+            'gya': 'ぎゃ', 'gyu': 'ぎゅ', 'gyo': 'ぎょ',
+            'ja': 'じゃ', 'ju': 'じゅ', 'jo': 'じょ',
+            'bya': 'びゃ', 'byu': 'びゅ', 'byo': 'びょ',
+            'pya': 'ぴゃ', 'pyu': 'ぴゅ', 'pyo': 'ぴょ'
+        }
     },
     katakana: {
-        'a': 'ア', 'i': 'イ', 'u': 'ウ', 'e': 'エ', 'o': 'オ',
-        'ka': 'カ', 'ki': 'キ', 'ku': 'ク', 'ke': 'ケ', 'ko': 'コ',
-        'sa': 'サ', 'shi': 'シ', 'su': 'ス', 'se': 'セ', 'so': 'ソ',
-        'ta': 'タ', 'chi': 'チ', 'tsu': 'ツ', 'te': 'テ', 'to': 'ト',
-        'na': 'ナ', 'ni': 'ニ', 'nu': 'ヌ', 'ne': 'ネ', 'no': 'ノ',
-        'ha': 'ハ', 'hi': 'ヒ', 'fu': 'フ', 'he': 'ヘ', 'ho': 'ホ',
-        'ma': 'マ', 'mi': 'ミ', 'mu': 'ム', 'me': 'メ', 'mo': 'モ',
-        'ya': 'ヤ', 'yu': 'ユ', 'yo': 'ヨ',
-        'ra': 'ラ', 'ri': 'リ', 'ru': 'ル', 're': 'レ', 'ro': 'ロ',
-        'wa': 'ワ', 'wo': 'ヲ', 'n': 'ン'
+        // Basic characters
+        basic: {
+            'a': 'ア', 'i': 'イ', 'u': 'ウ', 'e': 'エ', 'o': 'オ',
+            'ka': 'カ', 'ki': 'キ', 'ku': 'ク', 'ke': 'ケ', 'ko': 'コ',
+            'sa': 'サ', 'shi': 'シ', 'su': 'ス', 'se': 'セ', 'so': 'ソ',
+            'ta': 'タ', 'chi': 'チ', 'tsu': 'ツ', 'te': 'テ', 'to': 'ト',
+            'na': 'ナ', 'ni': 'ニ', 'nu': 'ヌ', 'ne': 'ネ', 'no': 'ノ',
+            'ha': 'ハ', 'hi': 'ヒ', 'fu': 'フ', 'he': 'ヘ', 'ho': 'ホ',
+            'ma': 'マ', 'mi': 'ミ', 'mu': 'ム', 'me': 'メ', 'mo': 'モ',
+            'ya': 'ヤ', 'yu': 'ユ', 'yo': 'ヨ',
+            'ra': 'ラ', 'ri': 'リ', 'ru': 'ル', 're': 'レ', 'ro': 'ロ',
+            'wa': 'ワ', 'wo': 'ヲ', 'n': 'ン'
+        },
+        // Dakuten (voiced) and Handakuten characters
+        dakuten: {
+            'ga': 'ガ', 'gi': 'ギ', 'gu': 'グ', 'ge': 'ゲ', 'go': 'ゴ',
+            'za': 'ザ', 'ji': 'ジ', 'zu': 'ズ', 'ze': 'ゼ', 'zo': 'ゾ',
+            'da': 'ダ', 'dji': 'ヂ', 'dzu': 'ヅ', 'de': 'デ', 'do': 'ド',
+            'ba': 'バ', 'bi': 'ビ', 'bu': 'ブ', 'be': 'ベ', 'bo': 'ボ',
+            'pa': 'パ', 'pi': 'ピ', 'pu': 'プ', 'pe': 'ペ', 'po': 'ポ'
+        },
+        // Combination characters (yōon)
+        combinations: {
+            'kya': 'キャ', 'kyu': 'キュ', 'kyo': 'キョ',
+            'sha': 'シャ', 'shu': 'シュ', 'sho': 'ショ',
+            'cha': 'チャ', 'chu': 'チュ', 'cho': 'チョ',
+            'nya': 'ニャ', 'nyu': 'ニュ', 'nyo': 'ニョ',
+            'hya': 'ヒャ', 'hyu': 'ヒュ', 'hyo': 'ヒョ',
+            'mya': 'ミャ', 'myu': 'ミュ', 'myo': 'ミョ',
+            'rya': 'リャ', 'ryu': 'リュ', 'ryo': 'リョ',
+            'gya': 'ギャ', 'gyu': 'ギュ', 'gyo': 'ギョ',
+            'ja': 'ジャ', 'ju': 'ジュ', 'jo': 'ジョ',
+            'bya': 'ビャ', 'byu': 'ビュ', 'byo': 'ビョ',
+            'pya': 'ピャ', 'pyu': 'ピュ', 'pyo': 'ピョ'
+        }
     }
+};
+
+// Difficulty configuration
+const DIFFICULTY = {
+    easy: { bubbles: 6, timeLimit: 0, label: 'Easy' },
+    medium: { bubbles: 8, timeLimit: 10, label: 'Medium' },
+    hard: { bubbles: 10, timeLimit: 7, label: 'Hard' }
 };
 
 // Game State
 class GameState {
     constructor() {
         this.mode = 'hiragana'; // or 'katakana'
+        this.difficulty = 'easy'; // easy, medium, hard
+        this.characterSets = { basic: true, dakuten: false, combinations: false };
         this.score = 0;
         this.streak = 0;
         this.totalAttempts = 0;
         this.correctAttempts = 0;
         this.currentSyllable = '';
         this.currentKana = '';
+        this.timeRemaining = 0;
         this.mistakes = this.loadMistakes();
     }
 
@@ -49,12 +109,17 @@ class GameState {
         }
         // Initialize mistake tracking for all kana
         const mistakes = { hiragana: {}, katakana: {} };
-        Object.values(KANA_DATA.hiragana).forEach(kana => {
-            mistakes.hiragana[kana] = 0;
+
+        // Initialize for all character sets
+        ['basic', 'dakuten', 'combinations'].forEach(set => {
+            Object.values(KANA_DATA.hiragana[set]).forEach(kana => {
+                mistakes.hiragana[kana] = 0;
+            });
+            Object.values(KANA_DATA.katakana[set]).forEach(kana => {
+                mistakes.katakana[kana] = 0;
+            });
         });
-        Object.values(KANA_DATA.katakana).forEach(kana => {
-            mistakes.katakana[kana] = 0;
-        });
+
         return mistakes;
     }
 
@@ -72,10 +137,30 @@ class GameState {
         return Math.round((this.correctAttempts / this.totalAttempts) * 100);
     }
 
+    // Get active kana map based on enabled character sets
+    getActiveKanaMap() {
+        const activeMap = {};
+        const modeData = KANA_DATA[this.mode];
+
+        Object.keys(this.characterSets).forEach(set => {
+            if (this.characterSets[set] && modeData[set]) {
+                Object.assign(activeMap, modeData[set]);
+            }
+        });
+
+        return activeMap;
+    }
+
     // Weighted random selection based on mistakes
     selectSyllable() {
-        const kanaMap = KANA_DATA[this.mode];
+        const kanaMap = this.getActiveKanaMap();
         const syllables = Object.keys(kanaMap);
+
+        if (syllables.length === 0) {
+            // Fallback to basic if no sets enabled
+            this.characterSets.basic = true;
+            return this.selectSyllable();
+        }
 
         // Create weighted array - characters with more mistakes appear more often
         const weighted = [];
@@ -94,12 +179,17 @@ class GameState {
 
     resetStats() {
         this.mistakes = { hiragana: {}, katakana: {} };
-        Object.values(KANA_DATA.hiragana).forEach(kana => {
-            this.mistakes.hiragana[kana] = 0;
+
+        // Reset for all character sets
+        ['basic', 'dakuten', 'combinations'].forEach(set => {
+            Object.values(KANA_DATA.hiragana[set]).forEach(kana => {
+                this.mistakes.hiragana[kana] = 0;
+            });
+            Object.values(KANA_DATA.katakana[set]).forEach(kana => {
+                this.mistakes.katakana[kana] = 0;
+            });
         });
-        Object.values(KANA_DATA.katakana).forEach(kana => {
-            this.mistakes.katakana[kana] = 0;
-        });
+
         this.saveMistakes();
         this.score = 0;
         this.streak = 0;
@@ -112,7 +202,7 @@ class GameState {
 class KanaGame {
     constructor() {
         this.state = new GameState();
-        this.bubbleCount = 6;
+        this.timerInterval = null;
         this.initializeElements();
         this.attachEventListeners();
         this.startNewRound();
@@ -132,7 +222,14 @@ class KanaGame {
             statsModal: document.getElementById('statsModal'),
             closeModal: document.getElementById('closeModal'),
             statsContent: document.getElementById('statsContent'),
-            resetStatsBtn: document.getElementById('resetStatsBtn')
+            resetStatsBtn: document.getElementById('resetStatsBtn'),
+            // New elements
+            difficultyBtns: document.querySelectorAll('.difficulty-btn'),
+            timerDisplay: document.getElementById('timerDisplay'),
+            timerValue: document.getElementById('timerValue'),
+            basicSetCheckbox: document.getElementById('basicSet'),
+            dakutenSetCheckbox: document.getElementById('dakutenSet'),
+            combinationSetCheckbox: document.getElementById('combinationSet')
         };
     }
 
@@ -148,6 +245,28 @@ class KanaGame {
                 this.hideStats();
             }
         });
+
+        // Difficulty buttons
+        this.elements.difficultyBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const difficulty = btn.getAttribute('data-difficulty');
+                this.switchDifficulty(difficulty);
+            });
+        });
+
+        // Character set toggles
+        this.elements.basicSetCheckbox.addEventListener('change', (e) => {
+            this.state.characterSets.basic = e.target.checked;
+            this.startNewRound();
+        });
+        this.elements.dakutenSetCheckbox.addEventListener('change', (e) => {
+            this.state.characterSets.dakuten = e.target.checked;
+            this.startNewRound();
+        });
+        this.elements.combinationSetCheckbox.addEventListener('change', (e) => {
+            this.state.characterSets.combinations = e.target.checked;
+            this.startNewRound();
+        });
     }
 
     switchMode(mode) {
@@ -161,13 +280,89 @@ class KanaGame {
         this.startNewRound();
     }
 
+    switchDifficulty(difficulty) {
+        this.state.difficulty = difficulty;
+
+        // Update button states
+        this.elements.difficultyBtns.forEach(btn => {
+            btn.classList.toggle('active', btn.getAttribute('data-difficulty') === difficulty);
+        });
+
+        // Start new round with new difficulty
+        this.startNewRound();
+    }
+
+    startTimer() {
+        const timeLimit = DIFFICULTY[this.state.difficulty].timeLimit;
+        if (timeLimit === 0) {
+            this.elements.timerDisplay.style.display = 'none';
+            return;
+        }
+
+        this.state.timeRemaining = timeLimit;
+        this.elements.timerDisplay.style.display = 'flex';
+        this.updateTimerDisplay();
+
+        this.stopTimer(); // Clear any existing timer
+        this.timerInterval = setInterval(() => {
+            this.state.timeRemaining--;
+            this.updateTimerDisplay();
+
+            if (this.state.timeRemaining <= 0) {
+                this.handleTimeUp();
+            }
+        }, 1000);
+    }
+
+    stopTimer() {
+        if (this.timerInterval) {
+            clearInterval(this.timerInterval);
+            this.timerInterval = null;
+        }
+    }
+
+    updateTimerDisplay() {
+        this.elements.timerValue.textContent = this.state.timeRemaining;
+
+        // Add warning class when time is low
+        if (this.state.timeRemaining <= 3) {
+            this.elements.timerDisplay.classList.add('warning');
+        } else {
+            this.elements.timerDisplay.classList.remove('warning');
+        }
+    }
+
+    handleTimeUp() {
+        this.stopTimer();
+
+        // Count as incorrect attempt
+        this.state.totalAttempts++;
+        this.state.streak = 0;
+
+        // Record mistake for the current kana
+        this.state.recordMistake(this.state.currentKana);
+
+        // Update display
+        this.updateDisplay();
+
+        // Start new round after brief delay
+        setTimeout(() => {
+            this.startNewRound();
+        }, 1000);
+    }
+
+
     startNewRound() {
+        // Stop any existing timer
+        this.stopTimer();
+
         // Clear previous bubbles
         this.elements.gameArea.innerHTML = '';
 
         // Select syllable using weighted selection
         this.state.currentSyllable = this.state.selectSyllable();
-        this.state.currentKana = KANA_DATA[this.state.mode][this.state.currentSyllable];
+        const activeMap = this.state.getActiveKanaMap();
+        this.state.currentKana = activeMap[this.state.currentSyllable];
 
         // Display syllable
         this.elements.syllable.textContent = this.state.currentSyllable;
@@ -177,14 +372,18 @@ class KanaGame {
 
         // Update display
         this.updateDisplay();
+
+        // Start timer if difficulty requires it
+        this.startTimer();
     }
 
     generateBubbles() {
-        const kanaMap = KANA_DATA[this.state.mode];
-        const allKanas = Object.values(kanaMap);
+        const activeMap = this.state.getActiveKanaMap();
+        const allKanas = Object.values(activeMap);
+        const bubbleCount = DIFFICULTY[this.state.difficulty].bubbles;
 
         // Select random incorrect kanas, weighted by mistakes
-        const incorrectKanas = this.selectIncorrectKanas(allKanas, this.bubbleCount - 1);
+        const incorrectKanas = this.selectIncorrectKanas(allKanas, bubbleCount - 1);
 
         // Combine correct and incorrect kanas
         const bubbleKanas = [...incorrectKanas, this.state.currentKana];

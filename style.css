@@ -79,15 +79,20 @@ body {
 }
 
 @keyframes float {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translate(0, 0) scale(1);
     }
+
     25% {
         transform: translate(50px, -50px) scale(1.1);
     }
+
     50% {
         transform: translate(-30px, 50px) scale(0.9);
     }
+
     75% {
         transform: translate(40px, 30px) scale(1.05);
     }
@@ -162,6 +167,102 @@ header {
     box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
 }
 
+/* Game Controls */
+.game-controls {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.difficulty-selector,
+.character-sets {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.control-label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.btn-group {
+    display: flex;
+    gap: 0.5rem;
+    background: var(--bg-card);
+    padding: 0.5rem;
+    border-radius: var(--border-radius);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.difficulty-btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 12px;
+    background: transparent;
+    color: var(--text-secondary);
+    font-family: inherit;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.difficulty-btn:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-primary);
+}
+
+.difficulty-btn.active {
+    background: var(--gradient-2);
+    color: white;
+    box-shadow: 0 4px 12px rgba(236, 72, 153, 0.4);
+}
+
+.toggles-group {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.set-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    background: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.set-toggle:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.set-toggle input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: var(--accent-primary);
+}
+
+.set-toggle span {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
 /* Game Info */
 .game-info {
     margin-bottom: 2rem;
@@ -232,11 +333,63 @@ header {
 }
 
 @keyframes pulse {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: scale(1);
     }
+
     50% {
         transform: scale(1.05);
+    }
+}
+
+/* Timer Display */
+.timer-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+}
+
+.timer-icon {
+    font-size: 2rem;
+}
+
+.timer-value {
+    font-size: 2rem;
+    font-weight: 800;
+    background: var(--gradient-3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.timer-display.warning {
+    animation: timerWarning 0.5s ease-in-out infinite;
+}
+
+.timer-display.warning .timer-value {
+    background: var(--gradient-2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+@keyframes timerWarning {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
     }
 }
 
@@ -288,9 +441,12 @@ header {
 }
 
 @keyframes bubbleFloat {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(-10px);
     }
@@ -301,11 +457,13 @@ header {
         transform: scale(1);
         opacity: 1;
     }
+
     50% {
         transform: scale(1.3);
         background: var(--accent-success);
         border-color: var(--accent-success);
     }
+
     100% {
         transform: scale(0);
         opacity: 0;
@@ -313,15 +471,26 @@ header {
 }
 
 @keyframes incorrectShake {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateX(0);
     }
-    10%, 30%, 50%, 70%, 90% {
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
         transform: translateX(-10px);
         background: rgba(239, 68, 68, 0.2);
         border-color: var(--accent-error);
     }
-    20%, 40%, 60%, 80% {
+
+    20%,
+    40%,
+    60%,
+    80% {
         transform: translateX(10px);
     }
 }
@@ -395,6 +564,7 @@ footer {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -417,6 +587,7 @@ footer {
         transform: translateY(50px);
         opacity: 0;
     }
+
     to {
         transform: translateY(0);
         opacity: 1;
