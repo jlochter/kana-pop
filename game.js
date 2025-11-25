@@ -392,7 +392,7 @@ class KanaGame {
         this.shuffleArray(bubbleKanas);
 
         // Create bubbles with random positions
-        const positions = this.generateBubblePositions(this.bubbleCount);
+        const positions = this.generateBubblePositions(bubbleCount);
         bubbleKanas.forEach((kana, index) => {
             this.createBubble(kana, positions[index]);
         });
