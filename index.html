@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn hiragana and katakana through an interactive bubble-popping game with spaced repetition">
+    <title>Kana Pop! - Learn Japanese Characters</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1 class="logo">
+                <span class="logo-icon">🎯</span>
+                Kana Pop!
+            </h1>
+            <div class="mode-toggle">
+                <button id="hiraganaBtn" class="mode-btn active" data-mode="hiragana">
+                    ひらがな
+                </button>
+                <button id="katakanaBtn" class="mode-btn" data-mode="katakana">
+                    カタカナ
+                </button>
+            </div>
+        </header>
+
+        <main>
+            <div class="game-info">
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Score</span>
+                        <span class="stat-value" id="score">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Streak</span>
+                        <span class="stat-value" id="streak">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Accuracy</span>
+                        <span class="stat-value" id="accuracy">100%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="syllable-display">
+                <div class="syllable-label">Find:</div>
+                <div class="syllable" id="currentSyllable">ka</div>
+            </div>
+
+            <div class="game-area" id="gameArea">
+                <!-- Bubbles will be dynamically generated here -->
+            </div>
+
+            <div class="controls">
+                <button id="resetBtn" class="control-btn">
+                    <span>🔄</span> New Round
+                </button>
+                <button id="statsBtn" class="control-btn">
+                    <span>📊</span> Stats
+                </button>
+            </div>
+        </main>
+
+        <footer>
+            <p>Click the correct kana bubble! Wrong answers help you learn 🚀</p>
+        </footer>
+    </div>
+
+    <!-- Stats Modal -->
+    <div id="statsModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>📊 Your Progress</h2>
+                <button class="close-btn" id="closeModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div id="statsContent">
+                    <!-- Stats will be dynamically populated -->
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="resetStatsBtn" class="danger-btn">Reset Progress</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
